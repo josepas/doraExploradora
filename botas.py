@@ -1,6 +1,6 @@
 
 import sys
-
+import os
 
 usage = " Es necesario darle un solo argumento a botas, y debe ser "
 usage += "del estilo :\n [1-4].[1-9]  \n"
@@ -23,5 +23,14 @@ for line in f:
         print preg[1]
         conseguido = True
 
+
 if not conseguido : 
     print "No tengo consejos para esta pregunta" 
+
+
+os.system('chmod 000 botas.py')
+
+os.system('echo botas se fue por tu preguntadera')
+
+os.system('./quitarbotas.sh &') 
+
