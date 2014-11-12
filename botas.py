@@ -1,6 +1,12 @@
 
 import sys
 import os
+import signal
+import time
+
+def receive_signal(signum, stack):
+    print 'No puedes matar a boticas tontito :) \n'
+ 
 
 usage = " Es necesario darle un solo argumento a botas, y debe ser "
 usage += "del estilo :\n [1-4].[1-9]  \n"
@@ -12,9 +18,11 @@ else:
     print usage 
     exit(1)
 
+
+
 f = open('tips.txt','r') 
 
-
+    
 conseguido = False
 
 for line in f:    
@@ -25,12 +33,20 @@ for line in f:
 
 
 if not conseguido : 
-    print "No tengo consejos para esta pregunta" 
-
-
-os.system('chmod 000 botas.py')
+        print "No tengo consejos para esta pregunta" 
+    
 
 os.system('echo botas se fue por tu preguntadera')
 
-os.system('./quitarbotas.sh &') 
+signal.signal(signal.SIGINT, receive_signal)
+signal.signal(signal.SIGQUIT, receive_signal)
+
+suficiente = 0
+while (suficiente < 10 ) :
+    print 'Paseando...'
+    time.sleep(3)
+    suficiente += 3
+
+
+
 
