@@ -5,7 +5,7 @@ import signal
 import time
 
 def receive_signal(signum, stack):
-    print 'No puedes matar a boticas tontito :) \n'
+    print '-----> No puedes matar a boticas tontito :) \n'
  
 
 usage = " Es necesario darle un solo argumento a botas, y debe ser "
@@ -28,24 +28,25 @@ conseguido = False
 for line in f:    
     preg =line.split()
     if (preg[0] == npreg) :  
+        print "Consejo: \n"
         print preg[1]
+        print "\n"
         conseguido = True
 
 
 if not conseguido : 
-        print "No tengo consejos para esta pregunta" 
+        print "No tengo consejos para esta pregunta \n\n" 
     
-
-os.system('echo botas se fue por tu preguntadera')
+print "botas se fue por tu preguntadera \n"
 
 signal.signal(signal.SIGINT, receive_signal)
 signal.signal(signal.SIGQUIT, receive_signal)
 
 suficiente = 0
-while (suficiente < 10 ) :
+while (suficiente < 300 ) :
     print 'Paseando...'
-    time.sleep(3)
-    suficiente += 3
+    time.sleep(2)
+    suficiente += 2
 
 
 
