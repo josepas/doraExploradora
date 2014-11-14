@@ -185,7 +185,6 @@ lista = ['.aqui', '.todo', '.estaba', '.oculto', '.jejeps']
 for i in lista:
 	CrearArchivo(site3 + 'TUTANKAMIN/' + i, 0)
 DirBasura(site3 + 'TUTANKAMIN/.PuertaSecreta', 0)
-os.chmod(site3 + 'TUTANKAMIN/.PuertaSecreta', 0111)
 
 lista = ['Sacar', 'la', 'segunda', 'columna', 'de', 'este', 'archivo']
 
@@ -200,6 +199,7 @@ for i in range(50):
 	for j in range(50):
 		CrearArchivo(site3 + 'TUTANKAMIN/.PuertaSecreta/soldado' + str(i) + '*' + str(j), 0)
 
+os.chmod(site3 + 'TUTANKAMIN/.PuertaSecreta', 0111)
 # Pregunta 4
 DirBasura('Doraland/CuevaDelChaMAC', 0)
 
