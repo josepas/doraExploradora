@@ -1,18 +1,20 @@
 import os
 import sys
+from pwd import getpwnam
 
 if os.geteuid() != 0:
     print("Debes correr este script como root, genio.")
     sys.exit(1)
 
 # Paths de la tarea
-path_general = "/home/invitado/Tarea3"
+path_general = "/home/invitado/doraExploradora/Doraland"
 mochila      = path_general + "/mochila"
 lago_dubi    = path_general + "/LagoDubi"
 monte_sino   = path_general + "/ElMonteSino"
 desierto_sc  = path_general + "/DesiertoDelCharara"
 cueva_chamac = path_general + "/CuevaDelChaMAC"
 command = "ls " + mochila
+uid_invitado = getpwnam('invitado')[2]
 bools = [True, True, True]
 
 paths = [ path_general, lago_dubi, monte_sino, desierto_sc, cueva_chamac ]
@@ -25,6 +27,7 @@ item_desierto = None
 if not os.path.exists(mochila):
     print("No crearon la mochila, genios.")
     os.makedirs(mochila)
+    os.chown(mochila, uid_invitado, uid_invitado)
 
 # Verifica si los paths existen y que tengan los permisos correctos en un
 # principio
@@ -59,8 +62,7 @@ while(True):
         os.chmod(desierto_sc, 0755)
         bools[1] = False
     if item_desierto in ls and bools[2]:
-        print("Felicidades")
+        print("Oh nooooes")
         os.chmod(cueva_chamac, 0755)
+        os.system("source zorro.sh")
         bools[2] = False
-
-
