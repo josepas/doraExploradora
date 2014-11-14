@@ -24,7 +24,7 @@ else:
 f = open('tips.txt','r') 
 
 
-if (npreg == "lo logramos") : 
+if (npreg == "lohicimos") : 
     
     conseguido = False
     
