@@ -1,0 +1,6 @@
+#1 Items obtenidos en el lago
+colmillo
+#2 Items obtenidos en el monte sino
+pluma
+#3 Items obtenidos en el monte sino
+reliquia
