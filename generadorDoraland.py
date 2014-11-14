@@ -185,6 +185,7 @@ lista = ['.aqui', '.todo', '.estaba', '.oculto', '.jejeps']
 for i in lista:
 	CrearArchivo(site3 + 'TUTANKAMIN/' + i, 0)
 DirBasura(site3 + 'TUTANKAMIN/.PuertaSecreta', 0)
+os.chmod(site3 + 'TUTANKAMIN/.PuertaSecreta', 0111)
 
 lista = ['Sacar', 'la', 'segunda', 'columna', 'de', 'este', 'archivo']
 
