@@ -40,10 +40,10 @@ DirBasura("Doraland/LagoDubi", 0)
 sitio1 = "Doraland/LagoDubi"
 
 # Pregunta 1.1
-texto = "skjan loóíac fretsec botas juhytiga weyiro reparar miuolis potroski\n"
+texto = "skjan looiac fretsec botas juhytiga weyiro reparar miuolis potroski\n"
 CrearArchivoContenido("Doraland/LagoDubi/extranjero", texto)
 
-texto = "En el archivo plano_barco se encuentra el plano del barco y en el archivo barco está el actual del barco. Compáralos y di qué está mal\n"
+texto = "En el archivo plano_barco se encuentra el plano del barco y en el archivo barco esta el actual del barco. Comparalos y di que esta mal\n"
 CrearArchivoContenido("Doraland/LagoDubi/reparar", texto)
 
 # Pregunta 1.2

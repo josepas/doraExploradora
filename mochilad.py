@@ -2,6 +2,7 @@ import os
 import sys
 from pwd import getpwnam
 
+
 if os.geteuid() != 0:
     print("Debes correr este script como root, genio.")
     sys.exit(1)
@@ -57,12 +58,17 @@ while(True):
         print("Felicidades")
         os.chmod(monte_sino, 0755)
         bools[0] = False
+        os.system("timidity dora.mid > /dev/null 2>/dev/null &")
     if item_monte in ls and bools[1]:
         print("Felicidades")
         os.chmod(desierto_sc, 0755)
         bools[1] = False
+        os.system("timidity dora.mid > /dev/null 2>/dev/null &")
     if item_desierto in ls and bools[2]:
         print("Oh nooooes")
         os.chmod(cueva_chamac, 0755)
         os.system("source zorro.sh")
         bools[2] = False
+        os.system("timidity dora.mid > /dev/null 2>/dev/null &")
+
+
