@@ -36,7 +36,7 @@ DirBasura("Doraland", 0)
 #####     Lago Dubi      #####
 
 # Creo el dir Lago Dubi
-DirBasura("Doraland/LagoDubi", 300)
+DirBasura("Doraland/LagoDubi", 0)
 sitio1 = "Doraland/LagoDubi"
 
 # Pregunta 1.1
@@ -70,7 +70,7 @@ for i in range(30):
 	CrearArchivo("Doraland/LagoDubi/superficie/fondo/dubdub" + crap.pop().strip() , 0)
 	CrearArchivo("Doraland/LagoDubi/superficie/fondo/dubdub" + str(i*13), 0)
 
-DirBasura("Doraland/LagoDubi/Chikundubi", 0)
+DirBasura("Doraland/LagoDubi/chikundubi", 0)
 
 
 #####     Monte Sino      #####
@@ -89,7 +89,6 @@ DirBasura(site2 + "N1d0P00k33", 200)
 
 # Pregunta 2.2
 os.system('echo "Sabias que... cantamos la cancion del zorro el dia de cumpleanos de cada preparador?" >> ' + site2 + 'N1d0P00k33/webo')
-os.system('chmod 000 ' + site2 + 'N1d0P00k33/webo')
 
 # Pregunta 2.3
 DirBasura(site2 + "aqui", 0)
@@ -112,7 +111,7 @@ for i in range(2500):
 	if i != 893:
 		os.system("ln -s aquiNoEsta " + site2 + "cayendo/avispa" + str(i) )
 	else:
-		os.system('echo "/Doraland/MonteSino/aqui/se/encuentra/nidoDeAvispas" >> ' + site2 + 'cayendo/avispa893')
+		os.system('echo "/Doraland/ElMonteSino/aqui/se/encuentra/nidoDeAvispas" >> ' + site2 + 'cayendo/avispa893')
 
 
 #####     Desierto del Charara      #####
@@ -125,7 +124,7 @@ pass
 # Pregunta 3.2
 DirBasura(site3 + 'Piramide_POMAC',0)
 
-DirBasura(site3 + 'Piramide_POMAC/ComidaPodrida', 250)
+DirBasura(site3 + 'Piramide_POMAC/ComidaPodrida', 25)
 
 
 temporal = [randint(11, 7684) for x in range(1000)]
@@ -160,7 +159,7 @@ os.system('echo "Que los demas tengan ejecucion\n" >> ' + site3 + 'Piramide_Sala
 
 os.system('echo "Para Sala F: " >> ' + site3 + 'Piramide_Salas/Instrucciones')
 os.system('echo "Que el dueno y el grupo tengan permisos de lectura y modificacion" >> ' + site3 + 'Piramide_Salas/Instrucciones')
-os.system('echo -e "Los demas solo lectura\n" >> ' + site3 + 'Piramide_Salas/Instrucciones')
+os.system('echo "Los demas solo lectura\n" >> ' + site3 + 'Piramide_Salas/Instrucciones')
 
 os.system('echo "Para Sala ET: " >> ' + site3 + 'Piramide_Salas/Instrucciones')
 os.system('echo "Sala ET esta en la mierda, estara cerrada para todos" >> ' + site3 + 'Piramide_Salas/Instrucciones')
