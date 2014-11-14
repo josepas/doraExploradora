@@ -33,7 +33,6 @@ for line in f:
         print "\n"
         conseguido = True
 
-
 if not conseguido : 
         print "No tengo consejos para esta pregunta \n\n" 
     
