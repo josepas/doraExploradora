@@ -24,7 +24,7 @@ else:
 f = open('tips.txt','r') 
 
 
-if (npreg == "lohicimos") : 
+if (npreg != "lohicimos") : 
     
     conseguido = False
     
@@ -34,8 +34,10 @@ if (npreg == "lohicimos") :
         preg =line.split()
         if (preg[0] == npreg) :  
             print "Consejo: \n"
-            print preg[1]
-            print "\n"
+            s = "" 
+            for string in preg[1:]:
+                s +=" "+ string
+            print s + "\n" 
             conseguido = True
 
     if not conseguido : 
