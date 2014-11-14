@@ -23,7 +23,6 @@ for line in f:
         print preg[1]
         conseguido = True
 
-
 if not conseguido : 
     print "No tengo consejos para esta pregunta" 
 
