@@ -67,14 +67,14 @@ DirBasura("Doraland/LagoDubi/Chikundubi", 0)
 #####     Monte Sino      #####
 
 # Creo el dir Monte Sino
-DirBasura("Doraland/MonteSino", 600)
-site2 = "Doraland/MonteSino/"
+DirBasura("Doraland/ElMonteSino", 600)
+site2 = "Doraland/ElMonteSino/"
 
 # Pregunta 2.1
 CrearArchivo(site2 + "camino", 601)
 os.system('echo "N1d0P00k33" >> ' + site2 + 'camino')
 for i in range(602):
-	os.system('echo "' + crap.pop().strip() + '" >> Doraland/MonteSino/camino')
+	os.system('echo "' + crap.pop().strip() + '" >> Doraland/ElMonteSino/camino')
 
 DirBasura(site2 + "N1d0P00k33", 200)
 
@@ -89,13 +89,12 @@ DirBasura(site2 + "aqui/se/encuentra", 200)
 CrearArchivo(site2 + "aqui/se/encuentra/Pookee", 0)
 
 # Pregunta 2.4
-DirBasura(site2 + "nido", 0)
 for i in range(1111):
-	CrearArchivo(site2 + "nido/huevo" + str(i), 0)
+	CrearArchivo(site2 + "N1d0P00k33/huevo" + str(i), 0)
 	if i != 744:
-		os.system('echo "pookee" >> ' + site2 + 'nido/huevo' + str(i))
+		os.system('echo "pookee" >> ' + site2 + 'N1d0P00k33/huevo' + str(i))
 	else:
-		os.system('echo "intruso" >> ' + site2 + 'nido/huevo' + str(i))
+		os.system('echo "intruso" >> ' + site2 + 'N1d0P00k33/huevo' + str(i))
 
 # Pregunta 2.5
 DirBasura(site2 + "cayendo", 0)
@@ -105,6 +104,98 @@ for i in range(2500):
 		os.system("ln -s aquiNoEsta " + site2 + "cayendo/avispa" + str(i) )
 	else:
 		os.system('echo "/Doraland/MonteSino/aqui/se/encuentra/nidoDeAvispas" >> ' + site2 + 'cayendo/avispa893')
+
+
+#####     Desierto del Charara      #####
+DirBasura('Doraland/DesiertoDelCharara',0)
+site3='Doraland/DesiertoDelCharara/'
+
+# Pregunta 3.1
+pass
+
+# Pregunta 3.2
+DirBasura(site3 + 'Piramide_POMAC',0)
+
+DirBasura(site3 + 'Piramide_POMAC/ComidaPodrida', 250)
+
+
+temporal = [randint(11, 7684) for x in range(1000)]
+i = len(temporal)
+while i > 1:
+	os.system('echo "'+ str( temporal.pop() ) + '" >> ' + site3 + 'Piramide_POMAC/NeveraLLena')
+	i -= 1
+
+temporal = [randint(11, 7684) for x in range(1000)]
+i = len(temporal)
+while i > 1:
+	os.system('echo "'+ str( temporal.pop() ) + '" >> ' + site3 + 'Piramide_POMAC/MicroondasSucio')
+	i -= 1
+
+# Pregunta 3.3
+DirBasura(site3 + 'Piramide_Salas', 0)
+
+os.system('mkdir --mode=777 ' + site3 + 'Piramide_Salas/SalaA')
+os.system('mkdir --mode=777 ' + site3 + 'Piramide_Salas/SalaE')
+os.system('mkdir --mode=777 ' + site3 + 'Piramide_Salas/SalaF')
+os.system('mkdir --mode=777 ' + site3 + 'Piramide_Salas/SalaET')
+
+
+os.system('echo "Para Sala A: " >> ' + site3 + 'Piramide_Salas/Instrucciones')
+os.system('echo "Que el dueno tenga permisos de ejecucion, lectura y modificacion" >> ' + site3 + 'Piramide_Salas/Instrucciones')
+os.system('echo "Que el grupo tenga solo Lectura y modificacion " >> ' + site3 + 'Piramide_Salas/Instrucciones')
+os.system('echo "Todos los demas solo lectura\n" >> ' + site3 + 'Piramide_Salas/Instrucciones')
+
+os.system('echo "Para Sala E: " >> ' + site3 + 'Piramide_Salas/Instrucciones')
+os.system('echo "Que el dueno tenga todos los permisos" >> ' + site3 + 'Piramide_Salas/Instrucciones')
+os.system('echo "Que los demas tengan ejecucion\n" >> ' + site3 + 'Piramide_Salas/Instrucciones')
+
+os.system('echo "Para Sala F: " >> ' + site3 + 'Piramide_Salas/Instrucciones')
+os.system('echo "Que el dueno y el grupo tengan permisos de lectura y modificacion" >> ' + site3 + 'Piramide_Salas/Instrucciones')
+os.system('echo -e "Los demas solo lectura\n" >> ' + site3 + 'Piramide_Salas/Instrucciones')
+
+os.system('echo "Para Sala ET: " >> ' + site3 + 'Piramide_Salas/Instrucciones')
+os.system('echo "Sala ET esta en la mierda, estara cerrada para todos" >> ' + site3 + 'Piramide_Salas/Instrucciones')
+
+os.system('chmod 111 ' + site3 + 'Piramide_Salas/Instrucciones')
+   
+# Pregunta 3.4
+DirBasura(site3 + 'Piramide_Taquilla', 0)
+
+cadena = ''
+for i in range(12):
+	cadena += crap.pop().strip()
+
+os.system('echo "' + cadena + '" >> ' + site3 + 'Piramide_Taquilla/JeroglificosJP')
+
+# Pregunta 3.5 
+pass
+
+# Pregunta 3.6
+DirBasura(site3 + 'TUTANKAMIN', 0)
+lista = ['.aqui', '.todo', '.estaba', '.oculto', '.jejeps']
+
+for i in lista:
+	CrearArchivo(site3 + 'TUTANKAMIN/' + i, 0)
+DirBasura(site3 + 'TUTANKAMIN/.PuertaSecreta', 0)
+
+lista = ['Sacar', 'la', 'segunda', 'columna', 'de', 'este', 'archivo']
+
+for i in lista:
+	os.system('echo "' + i + '" >> ' + site3 + 'TUTANKAMIN/.jejeps')
+
+# Pregunta 3.7
+pass
+
+# Pregunta 3.8
+for i in range(50):
+	for j in range(50):
+		CrearArchivo(site3 + 'TUTANKAMIN/.PuertaSecreta/soldado' + str(i) + '*' + str(j), 0)
+
+# Pregunta 4
+DirBasura('Doraland/CuevaDelChaMAC', 0)
+
+
+
 
 
 
