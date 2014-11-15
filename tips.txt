@@ -9,12 +9,13 @@
 2.2 Menos webo porfa.
 2.4 Uno de los huevos no tiene un pooke adentro.
 2.5 Todas las abejas estan vinculadas a su nido. Que haremos?
+3.1 Dora, dora… Hay que entender la diferencia entre background y foreground. u_u
 3.2 No tengo nada que decir Dora, el manpa quiza sepa mas.
 3.3 No tengo permiso para responder esto.
-3.4 Filtra esas lineas y esas palabras perrito.
+3.4 Algunas personas deberían tener un filtro para sus palabras… Como el de UNIX.
 3.5 Un buen primer paso seria conocer el tty en el que estas trabajando.
 3.6 Los comandos con los que puedes resolver esto no estaban en la tarea pero deberias conocerlos.
-3.7 Muy facil no dire nada.
+3.7 It's too easy. I mean... who wouldn't be able to see it?
 3.8 Conocer expresiones regulares es indispensable para no hacerle dano a inocentes.
-4.1 Mata a ese zorro para que deje de joder porfa.
+4.1 Hay personas que solo estan vivas porque matar es ilegal... El zorro no es una persona.
 4.2 Si llegaste hasta aqui no se por que andas pidiendome ayuda en esto.

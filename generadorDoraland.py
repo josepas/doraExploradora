@@ -5,7 +5,8 @@ from random import randint
 from random import choice
 
 # Obtengo en crap palabras random
-f = open('/etc/dictionaries-common/words','r') 
+f = open('/etc/dictionaries-common/words','r')
+
 crap = f.readlines()
 f.close()
 
@@ -18,13 +19,17 @@ def DirBasura(ruta, n):
 
 	for i in range(int(n)):
 		os.mkdir(ruta + '/' + crap.pop().strip() )
-		archivo = open(ruta + '/' + crap.pop().strip() , 'w', 0) 
+		archivo = open(ruta + '/' + crap.pop().strip() , 'w', 0)
 
 # Crea archivo con N lineas basura
 def CrearArchivo(ruta, n):
-	archivo = open(ruta, 'w', 0) 
-	for i in range(int(n)):
-		archivo.write(crap.pop().strip() + '\n')
+    archivo = open(ruta, 'w', 0)
+    for i in range(int(n)):
+        archivo.write(crap.pop().strip() + '\n')
+
+def CrearArchivoContenido(ruta, contenido):
+    archivo = open(ruta, 'w', 0)
+    archivo.write(texto)
 
 DirBasura("Doraland", 0)
 
@@ -35,7 +40,11 @@ DirBasura("Doraland/LagoDubi", 0)
 sitio1 = "Doraland/LagoDubi"
 
 # Pregunta 1.1
-pass
+texto = "skjan looiac fretsec botas juhytiga weyiro reparar miuolis potroski\n"
+CrearArchivoContenido("Doraland/LagoDubi/extranjero", texto)
+
+texto = "En el archivo plano_barco se encuentra el plano del barco y en el archivo barco esta el actual del barco. Comparalos y di que esta mal\n"
+CrearArchivoContenido("Doraland/LagoDubi/reparar", texto)
 
 # Pregunta 1.2
 CrearArchivo("Doraland/LagoDubi/barco", 30)
@@ -156,7 +165,7 @@ os.system('echo "Para Sala ET: " >> ' + site3 + 'Piramide_Salas/Instrucciones')
 os.system('echo "Sala ET esta en la mierda, estara cerrada para todos" >> ' + site3 + 'Piramide_Salas/Instrucciones')
 
 os.system('chmod 111 ' + site3 + 'Piramide_Salas/Instrucciones')
-   
+
 # Pregunta 3.4
 DirBasura(site3 + 'Piramide_Taquilla', 0)
 
@@ -166,7 +175,7 @@ for i in range(12):
 
 os.system('echo "' + cadena + '" >> ' + site3 + 'Piramide_Taquilla/JeroglificosJP')
 
-# Pregunta 3.5 
+# Pregunta 3.5
 pass
 
 # Pregunta 3.6
@@ -190,6 +199,7 @@ for i in range(50):
 	for j in range(50):
 		CrearArchivo(site3 + 'TUTANKAMIN/.PuertaSecreta/soldado' + str(i) + '*' + str(j), 0)
 
+os.chmod(site3 + 'TUTANKAMIN/.PuertaSecreta', 0111)
 # Pregunta 4
 DirBasura('Doraland/CuevaDelChaMAC', 0)
 

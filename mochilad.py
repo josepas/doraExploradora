@@ -2,6 +2,7 @@ import os
 import sys
 from pwd import getpwnam
 
+
 if os.geteuid() != 0:
     print("Debes correr este script como root, genio.")
     sys.exit(1)
@@ -14,6 +15,7 @@ monte_sino   = path_general + "/ElMonteSino"
 desierto_sc  = path_general + "/DesiertoDelCharara"
 cueva_chamac = path_general + "/CuevaDelChaMAC"
 command = "ls " + mochila
+command_2 = "ls " + cueva_chamac
 uid_invitado = getpwnam('invitado')[2]
 bools = [True, True, True]
 
@@ -48,7 +50,7 @@ for item in contenido:
         item_desierto = contenido.next()
 
 
-while(True):
+while(not bools[2]):
 
     ls = os.popen(command).read()
     ls.split('\n')
@@ -57,12 +59,26 @@ while(True):
         print("Felicidades")
         os.chmod(monte_sino, 0755)
         bools[0] = False
+        os.system("timidity dora.mid > /dev/null 2>/dev/null &")
     if item_monte in ls and bools[1]:
         print("Felicidades")
         os.chmod(desierto_sc, 0755)
         bools[1] = False
+        os.system("timidity dora.mid > /dev/null 2>/dev/null &")
     if item_desierto in ls and bools[2]:
-        print("Oh nooooes")
         os.chmod(cueva_chamac, 0755)
-        os.system("source zorro.sh")
         bools[2] = False
+        os.system("timidity dora.mid > /dev/null 2>/dev/null &")
+
+while(True):
+    ls = os.popen(command_2).read()
+    ls.split('\n')
+
+    if item_lago in ls and item_desierto in ls and item_monte in ls:
+        for i in range(20):
+            os.system("cat lines.txt | write invitado tty1")
+        os.system("echo 'Echenle bolas, perros!' | write invitado tty1")
+
+
+
+
