@@ -193,8 +193,7 @@ for i in range(50):
 # Pregunta 4
 DirBasura('Doraland/CuevaDelChaMAC', 0)
 
-
-
+print(len(crap))
 
 
 
